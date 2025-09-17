@@ -1,0 +1,129 @@
+@import "common.css";
+/* import the common styles from common.css for use here */
+
+.experience-div {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.experience-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 24px;
+    border-radius: 24px;
+    /* border-radius => to get rounded edges */
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 6px 15px;
+    /* box-shadow => to add a soft shadow around the element
+    rgba - last value means at 10% opacity
+    0 - horizontal offset
+    6px - vertical offset
+    15px - blur amount */
+}
+
+.experience-card.spark {
+    border-color: #016630;
+    background-color: #F0FDF4;
+}
+
+.experience-card.rockwell {
+    border-color: #9F0712;
+    background: #FFF1F2;
+}
+
+.experience-card.shyft {
+    border-color: #1C398E;
+    background: #EFF6FF;
+}
+
+/* :hover => applies the correspodning styles only when user hovers over that experience div.. to make it stand out a little */
+.experience-card:hover {
+    transform: scale(1.03);
+    /* transform => to make the card slightly bigger */
+    box-shadow: rgba(2, 0, 0, 0.15) 0 12px 25px;
+    /* box-shadow => to add a soft shadow around the element
+    rgba → last value means at 15% opacity
+    0 - horizontal offset
+    12px - vertical offset
+    25px - blur amount */
+    cursor: pointer;
+    /* cursor: pointer => to change the mouse cursor to a hand icon when user hovers over the card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    /* transition => to make all these hover effects flow smoothly (ease) instead of instant change (0.3sec delay) */
+    filter: brightness(1.05);
+    /* filter => to make the card slightly brighter */
+}
+
+.company-header-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.company-logo img {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+    /* object-fit: contain => keep the image’s original proportions while fitting it inside the container */
+}
+
+.company-name {
+    font-weight: 600;
+    color: #380220;
+}
+
+.job-title {
+    font-weight: 500;
+    color: #4c1d95;
+}
+
+.job-duration {
+    display: flex;
+    align-items: center;
+    gap: 4.8px;
+}
+
+.job-work-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    /* list-style: none => to remove the default bullet/number styles */
+    padding-left: 0;
+}
+
+.job-work-list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.job-work-list-item i {
+    color: #02122b;
+    min-width: 18px;
+    /* min-wdith => to ensure that the item is at least 18px wide; to avoid it from becomng too small */
+    text-align: center;
+}
+
+
+/* For screens 750px or smaller: */
+@media (max-width: 750px) {
+    .experience-card {
+        flex: 1 1 100%;
+        /* to allow the card to grow (1st val) or shrink (2nd val) and take up full width of its container */
+        max-width: 100%;
+    }
+
+    .company-header-container {
+        gap: 12.8px;
+        /* reduce the spacing between logo and text */
+    }
+
+    .company-logo img {
+        width: 100px;
+        height: 100px;
+        /* smaller logo on mobile */
+    }
+}

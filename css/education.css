@@ -1,0 +1,68 @@
+@import "common.css";
+/* import the common styles from common.css for use here */
+
+.education-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 20px 40px;
+}
+
+.education-card {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 6px;
+    /* border-radius => to get rounded edges */
+    border: 1px solid lightgray;
+    padding: 20px 30px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    /* box-shadow => to add a soft shadow around the element
+    rgba - last value means at 10% opacity
+    0 - horizontal offset
+    4px - vertical offset
+    12px - blur amount */
+}
+
+.education-logo-name {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.education-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.education-logo {
+    width: 128px;
+    height: 128px;
+}
+
+
+/* For screens 750px or smaller: */
+@media (max-width: 750px) {
+    .education-card {
+        flex-direction: column;
+        /* put the school cards and text vertically instead of side by side */
+        padding: 16px;
+        /* reduce the padding for smaller screens */
+    }
+
+    .education-logo-name {
+        flex-direction: column;
+        /* put the logo and name vertically */
+        align-items: center;
+        /* center align the logo and name */
+    }
+
+    .education-name {
+        align-items: center;
+        /* center align the content */
+        text-align: center;
+        /* center align the text inside */
+    }
+}

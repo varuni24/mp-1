@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/projects.css" type="text/css" />
+    <link rel="stylesheet" href="css/calculator.css" type="text/css" />
+    <title>Varuni Gupta | Projects</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Varuni Gupta</h1>
+      <p>My Online Resume</p>
+    </header>
+
+    <div class="content-container">
+      <nav class="nav-bar">
+        <ul>
+          <li class="nav-item">
+            <i class="fa-solid fa-house"></i
+            ><a href="index.html" class="nav-item-link">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <i class="fa-solid fa-address-card"></i
+            ><a href="education.html" class="nav-item-link">Education</a>
+          </li>
+
+          <li class="nav-item">
+            <i class="fa-solid fa-briefcase"></i
+            ><a href="experience.html" class="nav-item-link">Experience</a>
+          </li>
+
+          <li class="nav-item">
+            <i class="fa-solid fa-code"></i
+            ><a href="skills.html" class="nav-item-link">Skills</a>
+          </li>
+
+          <li class="nav-item nav-active">
+            <i class="fa-solid fa-diagram-project"></i
+            ><a href="projects.html" class="nav-item-link">Projects</a>
+          </li>
+
+          <li class="nav-item">
+            <i class="fa-solid fa-award"></i
+            ><a href="certifications.html" class="nav-item-link"
+              >Certification</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <main>
+        <h2 class="page-title">Projects</h2>
+
+        <div class="projects-grid">
+          <!-- Real Time Face Mask Detetcor -->
+          <div class="project-card face">
+            <div class="project-icon"><i class="fas fa-mask"></i></div>
+            <h4 class="project-title">Real-Time Face Mask Detector</h4>
+            <p class="project-desc">
+              Real-time detection of face masks using computer vision
+            </p>
+            <div class="tech-stack">
+              <span class="chip">YOLOv5</span>
+              <span class="chip">Python</span>
+              <span class="chip">OpenCV</span>
+            </div>
+            <a
+              href="https://github.com/varuni24/Real-Time-Face-Mask-Detector"
+              class="btn-project"
+              >Visit Project</a
+            >
+          </div>
+
+          <!-- Topic Modelling News Articles -->
+          <div class="project-card topic">
+            <div class="project-icon"><i class="fas fa-newspaper"></i></div>
+            <h4 class="project-title">News Article Classifier</h4>
+            <p class="project-desc">
+              Classifying news articles into categories using NLP and topic
+              modeling
+            </p>
+            <div class="tech-stack">
+              <span class="chip">Python</span>
+              <span class="chip">NLP</span>
+              <span class="chip">LDA</span>
+            </div>
+            <a
+              href="https://github.com/varuni24/Topic-Modelling"
+              class="btn-project"
+              >Visit Project</a
+            >
+          </div>
+
+          <!-- Stock Trading App -->
+          <div class="project-card stock">
+            <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+            <h4 class="project-title">Stock Trading App</h4>
+            <p class="project-desc">
+              Manage stock portfolios with real-time analytics and secure user
+              login
+            </p>
+            <div class="tech-stack">
+              <span class="chip">ReactJS</span>
+              <span class="chip">Flask</span>
+              <span class="chip">SQLAlchemy</span>
+            </div>
+            <a
+              href="https://github.com/varuni24/Stock-Trading-Application"
+              class="btn-project"
+              >Visit Project</a
+            >
+          </div>
+
+          <!-- Chess-->
+          <div class="project-card chess">
+            <div class="project-icon"><i class="fas fa-chess"></i></div>
+            <h4 class="project-title">Chess Game</h4>
+            <p class="project-desc">
+              Multiplayer chess game with AI opponent using C++ and design
+              principles
+            </p>
+            <div class="tech-stack">
+              <span class="chip">C++</span>
+              <span class="chip">Git</span>
+              <span class="chip">OOP</span>
+            </div>
+            <a href="https://github.com/varuni24/Chess" class="btn-project"
+              >Visit Project</a
+            >
+          </div>
+        </div>
+
+        <div class="view-more-container">
+          <a
+            href="https://github.com/varuni24?tab=repositories"
+            target="_blank"
+            class="btn-view-more"
+            >View More on GitHub</a
+          >
+        </div>
+
+        <br />
+        <br />
+
+        <!-- ===== JS CALCULATOR div ===== -->
+        <div class="calculator-container">
+          <h4>JavaScript Calculator</h4>
+
+          <div class="calc-inputs">
+            <input type="number" id="first-number" placeholder="First Number" />
+            <input
+              type="number"
+              id="second-number"
+              placeholder="Second Number"
+            />
+          </div>
+
+          <div class="calc-button-container">
+            <button class="calc-button" onclick="addition()">+</button>
+            <button class="calc-button" onclick="subtraction()">-</button>
+            <button class="calc-button" onclick="multiplication()">*</button>
+            <button class="calc-button" onclick="division()">/</button>
+            <button class="calc-button" onclick="power()">**</button>
+            <button class="calc-button" onclick="clearAll()">Clear</button>
+          </div>
+
+          <div class="calc-output">
+            <p id="output"></p>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer>
+      &#169; 2025 All Rights Reserved by Varuni Gupta | <a href="#">Credits</a>
+    </footer>
+
+    <!-- ===== LINK TO CALCULATOR JS ===== -->
+    <script src="js/calculator.js"></script>
+  </body>
+</html>

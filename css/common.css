@@ -1,0 +1,188 @@
+@import "typography.css";
+/* import the font sizes for headers for use here */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+header {
+    padding: 16px;
+    background-color: #222E3C;
+    color: white;
+    text-align: left;
+}
+
+main {
+    flex: 1;
+    width: 70%;
+    background-color: rgb(245, 245, 245);
+    padding: 16px 48px 160px;
+}
+
+main * {
+    padding: 3px 2px;
+}
+
+
+footer {
+    padding: 16px;
+    text-align: center;
+    background-color: #222E3C;
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+/* :hover => applies the correspodning styles only when user hovers over the link.. to make it stand out a little */
+footer a:hover {
+    color: #5b7693;
+    cursor: pointer;
+    /* cursor: pointer => to change the mouse cursor to a hand icon when user hovers over the link... to show its a link */
+}
+
+.page-title {
+    color: #808080;
+    border-bottom: 3px solid lightgray;
+    margin-bottom: 32px;
+}
+
+.nav-bar {
+    width: 30%;
+    max-width: 300px;
+    padding: 8px;
+    background-color: #34495E;
+    border-top: 1px solid white;
+}
+
+.nav-bar ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    /* list-style: none => to remove the default bullet/number styles */
+    padding: 0;
+    margin: 0;
+    gap: 2px;
+    font-size: calc(14px + 0.1vmin);
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 8px;
+    /* border-radius => to get rounded edges */
+}
+
+.nav-item i {
+    display: inline;
+    color: white;
+}
+
+.nav-item:hover {
+    background-color: #2A3A4B;
+    cursor: pointer;
+    /* cursor: pointer => to change the mouse cursor to a hand icon when user hovers over the button... to show its a button */
+}
+
+.nav-active {
+    background-color: #1B2530;
+}
+
+.nav-item-link {
+    width: 100%;
+    text-decoration: none;
+    /* text-decoration: none => removes the underlines/default text decorations for links */
+    padding: 8px;
+    color: white;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.card {
+    margin: 32px auto;
+    padding: 32px;
+    background-color: white;
+    border: 2px solid lightgray;
+    border-radius: 16px;
+    /* border-radius => to get rounded edges */
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    /* box-shadow => to add a soft shadow around the element
+    rgba - last value means at 10% opacity
+    0 - horizontal offset
+    4px - vertical offset
+    12px  blur amount */
+    width: 100%;
+}
+
+.chip {
+    display: inline-block;
+    border: 1px solid lightgray;
+    border-radius: 32px;
+    /* border-radius => to get rounded edges */
+    padding: 4px 12px;
+    font-size: 12px;
+}
+
+
+/* For screens 750px or smaller: */
+@media (max-width: 750px) {
+    header {
+        text-align: center;
+        /* center align the header text */
+    }
+
+    main {
+        width: 100%;
+        /* main content takes the full width of screen */
+    }
+
+    .content-container {
+        flex-direction: column;
+        /* put the content vertically instead of side by side */
+    }
+
+    .nav-bar {
+        width: 100%;
+        /* navbar takes the full width */
+        max-width: 100%;
+        /* to avoid it from exceeding the container width */
+    }
+
+    .nav-bar ul {
+        flex-direction: row;
+        /* display the nav items horizontally */
+        flex-wrap: nowrap;
+        /* avoid wrapping */
+    }
+
+    .nav-item {
+        padding: 0;
+    }
+
+    .nav-item i {
+        display: none;
+        /* hide icons */
+    }
+}

@@ -1,0 +1,192 @@
+@import "common.css";
+/* import the common styles from common.css for use here */
+
+.projects-grid {
+    display: grid;
+    justify-items: center;
+    align-items: stretch;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* grid-template-columns => to create a responsive grid
+    repeat - repeat the column prop multiple times
+    auto-fit - create as many columns as it can fit in the container
+    minmax(300px, 1fr) - each column is at least 300px wide, but can grow to take the whole space (1fr) */
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-radius: 20px;
+    /* border-radius => to get rounded edges */
+    padding: 16px;
+    gap: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 6px 15px;
+    /* box-shadow => to add a soft shadow around the element
+    rgba - last value means at 10% opacity
+    0 - horizontal offset
+    6px - vertical offset
+    15px - blur amount */
+    border-style: solid;
+    border-width: 2px;
+}
+
+.project-icon {
+    font-size: calc(16px + 3vmin);
+}
+
+/* :hover => applies the correspodning styles only when user hovers over the project card.. to make it stand out a little */
+.project-card:hover {
+    transform: scale(1.05);
+    /* transform => to make the card slightly bigger */
+    box-shadow: rgba(0, 0, 0, 0.15) 0 12px 25px;
+    /* box-shadow => to add a soft shadow around the element
+    rgba - last value means at 15% opacity
+    0 - horizontal offset
+    12px - vertical offset
+    25px - blur amount */
+    cursor: pointer;
+    /* cursor: pointer => to change the mouse cursor to a hand icon when user hovers over the card */
+    filter: brightness(1.05);
+    /* filter => to make the card slightly brighter */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    /* transition => to make all these hover effects flow smoothly (ease) instead of instant change (0.3sec delay) */
+}
+
+
+.project-card p {
+    text-align: center;
+    color: #02122b;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    margin: 8px 0;
+}
+
+.tech-stack .chip {
+    background: #f9f9f9;
+    color: #380220;
+}
+
+.btn-project {
+    display: inline-block;
+    text-decoration: none;
+    /* text-decoration: none; => removes the underlines/default text decorations for links */
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 12px;
+    /* border-radius => to get rounded edges */
+}
+
+.btn-project:hover {
+    transform: scale(1.05);
+    /* transform => to make the card slightly bigger */
+    transition: background 0.25s ease, transform 0.25s ease;
+    /* transition => to make the background color and size change smoothly over 0.25 seconds */
+}
+
+.project-card.face {
+    background: #FAF5FF;
+    border-color: #C4B4FF;
+}
+
+.project-card.face .project-icon {
+    color: #C4B4FF;
+}
+
+.project-card.face .btn-project {
+    color: white;
+    background-color: #B681F7;
+}
+
+
+
+.project-card.topic {
+    background: #FFEDD4;
+    border-color: #FFB86A;
+}
+
+.project-card.topic .project-icon {
+    color: #FFB86A;
+}
+
+.project-card.topic .btn-project {
+    color: white;
+    background-color: #FF8904;
+}
+
+
+
+.project-card.stock {
+    background: #F7FEE7;
+    border-color: #9AE630;
+}
+
+.project-card.stock .project-icon {
+    color: #9AE630;
+}
+
+.project-card.stock .btn-project {
+    color: white;
+    background-color: #5EA529;
+}
+
+
+
+
+.project-card.chess {
+    background: #FDF2F8;
+    border-color: #FDA5D5;
+}
+
+.project-card.chess .project-icon {
+    color: #FDA5D5;
+}
+
+.project-card.chess .btn-project {
+    color: white;
+    background-color: #FB64B6;
+}
+
+
+
+.view-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.btn-view-more {
+    text-decoration: none;
+    /* text-decoration: none; => to remove the default decorations */
+    color: #fff;
+    background: darkslateblue;
+    padding: 9px 20px;
+    border-radius: 14px;
+    /* border-radius => to get rounded edges */
+}
+
+.btn-view-more:hover {
+    transform: scale(1.05);
+    /* transform => to make the button slightly bigger */
+    transition: background 0.25s ease, transform 0.25s ease;
+    /* transition => to make the background color and size change smoothly over 0.25 seconds */
+}
+
+
+
+/* For screens 750px or smaller: */
+@media (max-width: 750px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+        /* grid-template-columns => to create a responsive grid for smaller screens
+        repeat - repeat the column prop multiple times
+        auto-fit - create as many columns as it can fit in the container
+        minmax(275px, 1fr) - each column is at least 275px wide, but can grow to take the whole space (1fr) */
+    }
+}

@@ -1,0 +1,83 @@
+@import "common.css";
+/* import the common styles from common.css for use here */
+
+.skills-content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.skill-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.skill-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 96px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 16px;
+    /* border-radius => to get rounded edges */
+    padding: 16px;
+}
+
+.skill-item:hover {
+    box-shadow: rgba(2, 0, 0, 0.15) 0 12px 25px;
+    /* box-shadow => to add a soft shadow around the element
+    rgba → last value means at 15% opacity
+    0 - horizontal offset
+    12px - vertical offset
+    25px - blur amount */
+    transform: scale(1.03);
+    /* transform => to make the card slightly bigger*/
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    /* transition => to make all these hover effects flow smoothly (ease) instead of instant change (0.3sec delay) */
+    cursor: pointer;
+    /* cursor: pointer => to change the mouse cursor to a hand icon when user hovers over the card */
+    filter: brightness(1.05);
+    /* filter => to make the card slightly brighter */
+}
+
+.skill-name {
+    font-family: sans-serif;
+    color: #333;
+}
+
+.svg-image {
+    width: 48px;
+    height: 48px;
+}
+
+
+/* For screens 750px or smaller: */
+@media (max-width: 750px) {
+    .skill-list {
+        gap: 12px;
+        /* smaller gap */
+    }
+
+    .skill-item {
+        width: 80px;
+        /* smaller card size */
+        padding: 12px;
+        /* smaller padding */
+    }
+
+    .svg-image {
+        width: 40px;
+        height: 40px;
+        /* smaller icons */
+    }
+}

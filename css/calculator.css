@@ -1,0 +1,90 @@
+@import "common.css";
+/* import the common styles from common.css for use here */
+
+.calculator-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 24px;
+    border: 1px solid black;
+    border-radius: 16px;
+    /* border-radius => to get rounded edges */
+    width: fit-content;
+    max-width: 70%;
+    margin: 0 auto;
+    background-color: rgb(107, 162, 189);
+}
+
+.calc-inputs {
+    display: flex;
+    gap: 12px;
+}
+
+.calc-inputs input {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #9E9E9E;
+    border-radius: 8px;
+    /* border-radius => to get rounded edges */
+}
+
+.calc-button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.calc-button {
+    cursor: pointer;
+    /* cursor: pointer => to change the mouse cursor to a hand icon when user hovers over the button... to show its a button */
+    border-radius: 16px;
+    /* border-radius => to get rounded edges */
+    padding: 10px 16px;
+    background: #DBDBDB;
+    border: 1px solid #888;
+    font-weight: bold;
+}
+
+
+/* :hover => applies the correspodning styles only when user hovers over the button.. to make it stand out a little */
+.calc-button:hover {
+    background: #C4C4C4;
+}
+
+.calc-output p {
+    text-align: center;
+    padding: 12px;
+    font-weight: 600;
+    color: #02122b;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.negative {
+    color: red !important;
+}
+
+/* For screens 750px or smaller: */
+@media (max-width: 750px) {
+    .calculator-container {
+        width: 100%;
+        /* container takes full width */
+    }
+
+    .calc-inputs {
+        flex-direction: column;
+        /* put the inputs vertically, one below the other, instead of side by side */
+        align-items: center;
+        /* center align all in it */
+    }
+
+    .calc-inputs input {
+        width: 100%;
+        /* input takes full width */
+        max-width: 200px;
+        /* to avoid the input from becoming too wide */
+    }
+}
